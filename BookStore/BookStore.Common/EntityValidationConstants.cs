@@ -11,7 +11,7 @@ namespace BookStore.Common
 		public class Author
 		{
 			public const int NameMinLength = 1;
-			public const int NameMaxLength = 30;
+			public const int NameMaxLength = 50;
 
 			public const int DescriptionMinLength = 10;
 			public const int DescriptionMaxLength = 10000;
@@ -19,20 +19,20 @@ namespace BookStore.Common
 
 		public class Book
 		{
-			public const int NameMinLength = 1;
-			public const int NameMaxLength = 50;
+			public const int TitleMinLength = 1;
+			public const int TitleMaxLength = 50;
 
 			public const int DescriptionMinLength = 10;
 			public const int DescriptionMaxLength = 200;
 
-			public const string RatingMin = "1";
-			public const string RatingMax = "10";
+			//public const string RatingMin = "1";
+			//public const string RatingMax = "10";
 		}
 
         public class  Character 
         {
 			public const int NameMinLength = 1;
-			public const int NameMaxLength = 30;
+			public const int NameMaxLength = 50;
 
 			public const int DescriptionMinLength = 10;
 			public const int DescriptionMaxLength = 5000;

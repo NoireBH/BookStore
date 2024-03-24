@@ -21,6 +21,8 @@ namespace BookStore.Data
 
 		public DbSet<Publisher> Publishers { get; set; } = null!;
 
+		public DbSet<Order> Orders { get; set; } = null!;
+
 
 
 		protected override void OnModelCreating(ModelBuilder builder)

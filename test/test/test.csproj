@@ -4,12 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-BookStore-d48114c5-2f5a-4beb-893e-06666d6d22d4</UserSecretsId>
+    <UserSecretsId>aspnet-test-ba1e9d92-5592-417b-8345-d6671ddc5569</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="Areas\Identity\Pages\_ViewStart.cshtml" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.20" />
@@ -22,11 +18,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BookStore.Data\BookStore.Data.csproj" />
-    <ProjectReference Include="..\BookStore.Web.ViewModels\BookStore.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

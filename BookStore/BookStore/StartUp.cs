@@ -1,5 +1,5 @@
 using BookStore.Data;
-using Microsoft.AspNetCore.Identity;
+using BookStore.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +12,7 @@ builder.Services.AddDbContext<BookStoreDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
 	options.SignIn.RequireConfirmedAccount =
 		builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");

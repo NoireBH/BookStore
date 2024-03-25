@@ -25,6 +25,9 @@ namespace BookStore.Data.Models
 		public string Description { get; set; } = null!;
 
 		[Required]
+		public int SoldCopies {  get; set; }
+
+		[Required]
 		public int PublisherId { get; set; }
 
 		[ForeignKey(nameof(PublisherId))]

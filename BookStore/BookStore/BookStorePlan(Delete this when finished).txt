@@ -1,3 +1,0 @@
-﻿BookStore WebSite Plan:
-Database:
-Books, Authors, Characters, Publishers, Genres     

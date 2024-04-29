@@ -21,10 +21,6 @@ namespace BookStore.Data.Models
 		[MaxLength(DescriptionMaxLength)]
 		public string Description { get; set; } = null!;
 
-		public DateTime? DateOfBirth { get; set; }
-
-		public DateTime? DateOfDeath { get; set; }
-
 		public ICollection<Book> Books { get; set; } = null!;
 	}
 }

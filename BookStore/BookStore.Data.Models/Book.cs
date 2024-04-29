@@ -30,6 +30,12 @@ namespace BookStore.Data.Models
 		[Required]
 		public int PublisherId { get; set; }
 
+		[Required]
+		public int YearOfRelease { get; set; }
+
+		[Required]
+		public int PageCount { get; set; }
+
 		[ForeignKey(nameof(PublisherId))]
 
 		public Publisher Publisher { get; set; } = null!;

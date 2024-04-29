@@ -36,6 +36,10 @@ namespace BookStore.Data.Models
 		[Required]
 		public int PageCount { get; set; }
 
+		public bool IsActive { get; set; }
+
+		public int Discount {  get; set; }
+
 		[ForeignKey(nameof(PublisherId))]
 
 		public Publisher Publisher { get; set; } = null!;

@@ -24,6 +24,9 @@ namespace BookStore.Data.Models
 		[MaxLength(NameMaxLength)]
 		public string? NickName { get; set; } = null!;
 
-		public ICollection<Book> Books { get; set; } = null!;
+        [Required]
+        public string ImagePath { get; set; } = null!;
+
+        public ICollection<Book> Books { get; set; } = null!;
 	}
 }

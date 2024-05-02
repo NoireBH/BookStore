@@ -1,4 +1,7 @@
-﻿namespace BookStore.Data.Models
+﻿using System.ComponentModel.DataAnnotations;
+using static BookStore.Common.EntityValidationConstants.Publisher;
+
+namespace BookStore.Data.Models
 {
 	public class Publisher
 	{
@@ -7,9 +10,12 @@
             Books = new HashSet<Book>();
         }
 
+        [Key]
         public int Id { get; set; }
 
-		public string Name { get; set; } = null!;
+        [Required]
+        [MaxLength(NameMaxLength)]
+        public string Name { get; set; } = null!;
 
 		public ICollection<Book> Books { get; set; } = null!;
 	}

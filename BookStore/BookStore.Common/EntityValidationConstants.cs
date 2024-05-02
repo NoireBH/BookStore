@@ -23,7 +23,7 @@ namespace BookStore.Common
 			public const int TitleMaxLength = 50;
 
 			public const int DescriptionMinLength = 10;
-			public const int DescriptionMaxLength = 200;
+			public const int DescriptionMaxLength = 1000;
 
 			//public const string RatingMin = "1";
 			//public const string RatingMax = "10";
@@ -46,7 +46,8 @@ namespace BookStore.Common
 
         public class Publisher
         {
-            
+            public const int NameMinLength = 1;
+            public const int NameMaxLength = 50;
         }
     }
 }

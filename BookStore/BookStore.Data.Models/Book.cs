@@ -30,8 +30,8 @@ namespace BookStore.Data.Models
 		[Required]
 		public int PublisherId { get; set; }
 
-		[Required]
-		public int YearOfRelease { get; set; }
+		[Required]        
+        public int YearOfRelease { get; set; }
 
 		[Required]
 		public int PageCount { get; set; }
@@ -40,9 +40,8 @@ namespace BookStore.Data.Models
 
 		public int Discount {  get; set; }
 
-		[ForeignKey(nameof(PublisherId))]
-
-		public Publisher Publisher { get; set; } = null!;
+        [ForeignKey(nameof(PublisherId))]
+        public Publisher Publisher { get; set; } = null!;
 
 		public ICollection<Author> Authors { get; set; } = null!;
 

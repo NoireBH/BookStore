@@ -4,6 +4,7 @@ using BookStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240502192101_AddPublisherSeeder")]
+    partial class AddPublisherSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,8 +102,8 @@ namespace BookStore.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("Discount")
                         .HasColumnType("int");
@@ -128,71 +130,9 @@ namespace BookStore.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PublisherId");
+                    b.HasIndex("YearOfRelease");
 
                     b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself",
-                            Discount = 0,
-                            IsActive = true,
-                            PageCount = 1138,
-                            PublisherId = 1,
-                            SoldCopies = 0,
-                            Title = "It",
-                            YearOfRelease = 1986
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Geralt the Witcher—revered and hated—holds the line against the monsters plaguing humanity in this collection of adventures, the first chapter in Andrzej Sapkowski’s groundbreaking epic fantasy series that inspired the hit Netflix show and the blockbuster video games.",
-                            Discount = 0,
-                            IsActive = true,
-                            PageCount = 2000,
-                            PublisherId = 2,
-                            SoldCopies = 0,
-                            Title = "The Witcher Saga",
-                            YearOfRelease = 2020
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Thirteen Reasons Why is a young adult novel written by Jay Asher in 2007, which follows the story of Hannah Baker, a high school freshman, and the thirteen reasons why she has died by suicide.",
-                            Discount = 0,
-                            IsActive = true,
-                            PageCount = 320,
-                            PublisherId = 3,
-                            SoldCopies = 0,
-                            Title = "13 Reasons Why",
-                            YearOfRelease = 2007
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Arthas: Rise of the Lich King is a Warcraft novel by Christie Golden, who is the author of multiple Star Trek and other Warcraft novels. The novel dealing with the progression of Arthas from Prince to the Lich King, was released on April 21, 2009.",
-                            Discount = 0,
-                            IsActive = true,
-                            PageCount = 416,
-                            PublisherId = 4,
-                            SoldCopies = 0,
-                            Title = "World of Warcraft: Arthas: Rise of the Lich King",
-                            YearOfRelease = 2007
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Ready Player One is a 2011 science fiction novel, and the debut novel of American author Ernest Cline. The story, set in a dystopia in 2045, follows protagonist Wade Watts on his search for an Easter egg in a worldwide virtual reality game, the discovery of which would lead him to inherit the game creator's fortune.",
-                            Discount = 0,
-                            IsActive = true,
-                            PageCount = 384,
-                            PublisherId = 5,
-                            SoldCopies = 0,
-                            Title = "Ready Player One",
-                            YearOfRelease = 2011
-                        });
                 });
 
             modelBuilder.Entity("BookStore.Data.Models.Character", b =>
@@ -568,7 +508,7 @@ namespace BookStore.Data.Migrations
                 {
                     b.HasOne("BookStore.Data.Models.Publisher", "Publisher")
                         .WithMany("Books")
-                        .HasForeignKey("PublisherId")
+                        .HasForeignKey("YearOfRelease")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

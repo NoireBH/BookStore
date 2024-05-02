@@ -26,6 +26,7 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 1986,
                 PageCount = 1138,
+                PublisherId = 1
             };
 
             books.Add(book);
@@ -34,10 +35,11 @@ namespace BookStore.Data.Configurations
             {
                 Id = 2,
                 Title = "The Witcher Saga",
-                Description = "Geralt the Witcher—revered and hated—holds the line against the monsters plaguing humanity in this collection of adventures, the first chapter in Andrzej Sapkowski’s groundbreaking epic fantasy series that inspired the hit Netflix show and the blockbuster video games.\r\n",
+                Description = "Geralt the Witcher—revered and hated—holds the line against the monsters plaguing humanity in this collection of adventures, the first chapter in Andrzej Sapkowski’s groundbreaking epic fantasy series that inspired the hit Netflix show and the blockbuster video games.",
                 SoldCopies = 0,
                 YearOfRelease = 2020,
                 PageCount = 2000,
+                PublisherId = 2
             };
 
             books.Add(book);
@@ -50,6 +52,7 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2007,
                 PageCount = 320,
+                PublisherId = 3
             };
 
             books.Add(book);
@@ -62,6 +65,7 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2007,
                 PageCount = 416,
+                PublisherId = 4
             };
 
             books.Add(book);
@@ -74,6 +78,7 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2011,
                 PageCount = 384,
+                PublisherId = 5
             };
 
             books.Add(book);

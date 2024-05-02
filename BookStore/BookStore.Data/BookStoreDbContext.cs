@@ -30,7 +30,9 @@ namespace BookStore.Data
 
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
+			builder.ApplyConfiguration(new PublisherEntityConfiguration());
 			builder.ApplyConfiguration(new BookEntityConfiguration());
+			
 
 			base.OnModelCreating(builder);
 		}

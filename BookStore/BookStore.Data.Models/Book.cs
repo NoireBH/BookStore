@@ -36,7 +36,7 @@ namespace BookStore.Data.Models
 		[Required]
 		public int PageCount { get; set; }
 
-		public bool IsActive { get; set; }
+		public bool IsActive { get; set; } = true;
 
 		public int Discount {  get; set; }
 

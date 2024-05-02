@@ -1,4 +1,5 @@
-﻿using BookStore.Data.Models;
+﻿using BookStore.Data.Configurations;
+using BookStore.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,8 @@ namespace BookStore.Data
 
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
+			builder.ApplyConfiguration(new BookEntityConfiguration());
+
 			base.OnModelCreating(builder);
 		}
 

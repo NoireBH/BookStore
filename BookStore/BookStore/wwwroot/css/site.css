@@ -16,3 +16,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.home-new-books-container h1 span {
+    color: darkgreen;
+}

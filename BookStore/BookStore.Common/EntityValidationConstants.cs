@@ -29,15 +29,6 @@ namespace BookStore.Common
 			//public const string RatingMax = "10";
 		}
 
-        public class  Character 
-        {
-			public const int NameMinLength = 1;
-			public const int NameMaxLength = 50;
-
-			public const int DescriptionMinLength = 10;
-			public const int DescriptionMaxLength = 5000;
-		}
-
 		public class Genre
 		{
 			public const int NameMinLength = 2;

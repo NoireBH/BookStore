@@ -18,8 +18,6 @@ namespace BookStore.Data
 
 		public DbSet<Book> Books { get; set; } = null!;
 
-		public DbSet<Character> Characters { get; set; } = null!;
-
 		public DbSet<Genre> Genres { get; set; } = null!;
 
 		public DbSet<Publisher> Publishers { get; set; } = null!;

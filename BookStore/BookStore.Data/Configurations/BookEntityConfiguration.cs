@@ -9,6 +9,17 @@ namespace BookStore.Data.Configurations
         public void Configure(EntityTypeBuilder<Book> builder)
         {
             builder.HasData(SeedBooks());
+
+            builder
+            .HasMany(b => b.Authors)
+            .WithMany(a => a.Books)
+            .UsingEntity(
+                 ba => ba.HasData(
+                     new { BooksId = 1, AuthorsId = 1 },
+                     new { BooksId = 2, AuthorsId = 2 },
+                     new { BooksId = 3, AuthorsId = 3 },
+                     new { BooksId = 4, AuthorsId = 4 },
+                     new { BooksId = 5, AuthorsId = 5 }));
         }
 
         private Book[] SeedBooks()

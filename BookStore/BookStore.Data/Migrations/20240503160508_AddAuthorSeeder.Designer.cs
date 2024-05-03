@@ -4,6 +4,7 @@ using BookStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240503160508_AddAuthorSeeder")]
+    partial class AddAuthorSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -228,83 +230,6 @@ namespace BookStore.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Satire"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Poetry"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Comedy"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Crime"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Drama"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Fantasy"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Sci-Fi"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Horror"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "Romance"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "History"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Name = "Mystery"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Name = "Thriller"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Name = "Adventure"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Name = "Manga"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Name = "Light-Novel"
-                        });
                 });
 
             modelBuilder.Entity("BookStore.Data.Models.Order", b =>

@@ -30,6 +30,8 @@ namespace BookStore.Data
 		{
 			builder.ApplyConfiguration(new PublisherEntityConfiguration());
 			builder.ApplyConfiguration(new BookEntityConfiguration());
+			builder.ApplyConfiguration(new AuthorEntityConfiguration());
+			builder.ApplyConfiguration(new GenreEntityConfiguration());
 			
 
 			base.OnModelCreating(builder);

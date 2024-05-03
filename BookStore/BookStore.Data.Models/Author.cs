@@ -17,8 +17,8 @@ namespace BookStore.Data.Models
 		[MaxLength(NameMaxLength)]
 		public string Name { get; set; } = null!;
 
-        [Required]
-        public string ImagePath { get; set; } = null!;
+        //[Required]
+        //public string ImagePath { get; set; } = null!;
 
         [Required]
 		[MaxLength(DescriptionMaxLength)]

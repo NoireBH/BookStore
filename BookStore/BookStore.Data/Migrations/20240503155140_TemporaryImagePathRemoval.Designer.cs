@@ -4,6 +4,7 @@ using BookStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240503155140_TemporaryImagePathRemoval")]
+    partial class TemporaryImagePathRemoval
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,38 +75,6 @@ namespace BookStore.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Authors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Stephen Edwin King is an American author. Called the \"King of Horror\", he has also explored other genres, among them suspense, crime, science-fiction, fantasy and mystery. He has also written approximately 200 short stories, most of which have been published in collections.",
-                            Name = "Stephen King"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Andrzej Sapkowski is a Polish fantasy writer, essayist, translator and a trained economist. He is best known for his six-volume series of books The Witcher, which revolves around the eponymous \"witcher,\" a monster-hunter, Geralt of Rivia.",
-                            Name = "Andrzej Sapkowski"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Jay Asher is an American writer and novelist. He is best known for writing the bestselling 2007 book Thirteen Reasons Why.",
-                            Name = "Jay Asher"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Christie Golden is an American author. She has written many novels and several short stories in fantasy, horror and science fiction.",
-                            Name = "Christie Golden"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Ernest Christy Cline is an American science fiction novelist, slam poet, and screenwriter. He wrote the novels Ready Player One, Armada, and Ready Player Two and co-wrote the screenplay for the film adaptation of Ready Player One, directed by Steven Spielberg.",
-                            Name = "Ernest Cline"
-                        });
                 });
 
             modelBuilder.Entity("BookStore.Data.Models.Book", b =>
@@ -228,83 +198,6 @@ namespace BookStore.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Satire"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Poetry"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Comedy"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Crime"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Drama"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Fantasy"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Sci-Fi"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Horror"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "Romance"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "History"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Name = "Mystery"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Name = "Thriller"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Name = "Adventure"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Name = "Manga"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Name = "Light-Novel"
-                        });
                 });
 
             modelBuilder.Entity("BookStore.Data.Models.Order", b =>

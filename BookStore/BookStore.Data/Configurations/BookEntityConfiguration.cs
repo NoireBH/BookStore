@@ -37,7 +37,9 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 1986,
                 PageCount = 1138,
-                PublisherId = 1
+                PublisherId = 1,
+                ImagePath = "/images/books/it cover.jpg"
+
             };
 
             books.Add(book);
@@ -50,7 +52,8 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2020,
                 PageCount = 2000,
-                PublisherId = 2
+                PublisherId = 2,
+                ImagePath = "/images/books/witcher saga cover.jpg"
             };
 
             books.Add(book);
@@ -63,7 +66,8 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2007,
                 PageCount = 320,
-                PublisherId = 3
+                PublisherId = 3,
+                ImagePath = "/images/books/13 reasons why cover.jpg"
             };
 
             books.Add(book);
@@ -76,7 +80,8 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2007,
                 PageCount = 416,
-                PublisherId = 4
+                PublisherId = 4,
+                ImagePath = "/images/books/wow arthas cover.jpg"
             };
 
             books.Add(book);
@@ -89,7 +94,8 @@ namespace BookStore.Data.Configurations
                 SoldCopies = 0,
                 YearOfRelease = 2011,
                 PageCount = 384,
-                PublisherId = 5
+                PublisherId = 5,
+                ImagePath = "/images/books/ready player one cover.jpg"
             };
 
             books.Add(book);

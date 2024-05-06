@@ -39,8 +39,8 @@ namespace BookStore.Data.Models
 
 		public int Discount {  get; set; }
 
-		//[Required]
-		//public string ImagePath { get; set; } = null!;
+		[Required]
+		public string ImagePath { get; set; } = null!;
 
         [ForeignKey(nameof(PublisherId))]
         public Publisher Publisher { get; set; } = null!;

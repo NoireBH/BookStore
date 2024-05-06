@@ -14,6 +14,25 @@ namespace BookStore.Data.Configurations
         public void Configure(EntityTypeBuilder<Genre> builder)
         {
             builder.HasData(SeedGenres());
+
+            builder
+            .HasMany(b => b.Books)
+            .WithMany(a => a.Genres)
+            .UsingEntity(
+                 ba => ba.HasData(
+                     new { BooksId = 1, GenresId = 6 },
+                     new { BooksId = 1, GenresId = 8 },
+                     new { BooksId = 2, GenresId = 5 },
+                     new { BooksId = 2, GenresId = 6 },
+                     new { BooksId = 2, GenresId = 13 },
+                     new { BooksId = 3, GenresId = 5 },
+                     new { BooksId = 3, GenresId = 11 },
+                     new { BooksId = 3, GenresId = 12 },
+                     new { BooksId = 4, GenresId = 6 },
+                     new { BooksId = 5, GenresId = 7 },
+                     new { BooksId = 5, GenresId = 12 },
+                     new { BooksId = 5, GenresId = 13 }
+                     ));
         }
 
         private Genre[] SeedGenres()

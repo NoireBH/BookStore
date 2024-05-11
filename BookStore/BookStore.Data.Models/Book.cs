@@ -32,7 +32,10 @@ namespace BookStore.Data.Models
 		[Required]        
         public int YearOfRelease { get; set; }
 
-		[Required]
+        [Required]
+        public double Price { get; set; }
+
+        [Required]
 		public int PageCount { get; set; }
 
 		public bool IsActive { get; set; } = true;

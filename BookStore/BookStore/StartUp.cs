@@ -1,7 +1,9 @@
 
 using BookStore.Data;
 using BookStore.Data.Models;
+using BookStore.Services.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using BookStore.Web.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +31,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 })
  .AddEntityFrameworkStores<BookStoreDbContext>();
 
+
+builder.Services.AddApplicationServices(typeof(IBookService));
 
 builder.Services.AddControllersWithViews();
 

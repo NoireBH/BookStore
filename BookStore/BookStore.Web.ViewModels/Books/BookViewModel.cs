@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStore.Web.ViewModels.Authors;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,8 @@ namespace BookStore.Web.ViewModels.Books
 
         public string Title { get; set; } = null!;
 
-        public string Author { get; set; } = null!; 
-
         public double Price { get; set; }
+
+        public AuthorViewModel[] Authors { get; set; } = null!; 
     }
 }

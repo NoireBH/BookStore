@@ -31,4 +31,8 @@
     <ProjectReference Include="..\BookStore.Web.ViewModels\BookStore.Web.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\authors\" />
+  </ItemGroup>
+
 </Project>

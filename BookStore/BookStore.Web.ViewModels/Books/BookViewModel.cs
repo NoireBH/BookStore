@@ -12,6 +12,8 @@ namespace BookStore.Web.ViewModels.Books
 
         public double Price { get; set; }
 
+        public double DiscountedPrice { get; set; }
+
         public virtual AuthorViewModel[] Authors { get; set; } = null!; 
     }
 }

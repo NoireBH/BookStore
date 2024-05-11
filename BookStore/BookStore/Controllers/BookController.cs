@@ -2,7 +2,7 @@
 
 namespace BookStore.Web.Controllers
 {
-    public class BookController : Controller
+    public class BookController : BaseController
     {
         public IActionResult Index()
         {

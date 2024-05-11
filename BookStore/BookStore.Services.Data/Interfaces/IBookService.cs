@@ -1,4 +1,5 @@
 ﻿using BookStore.Web.ViewModels.Books;
+using BookStore.Web.ViewModels.Home;
 
 namespace BookStore.Services.Data.Interfaces
 {
@@ -7,5 +8,7 @@ namespace BookStore.Services.Data.Interfaces
         Task<ICollection<BookViewModel>> GetAllBooks();
 
         Task<ICollection<BookViewModel>> GetNewestBooks();
+
+        Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooks();
     }
 }

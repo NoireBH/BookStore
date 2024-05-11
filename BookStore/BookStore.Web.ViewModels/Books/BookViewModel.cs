@@ -1,13 +1,10 @@
-﻿using BookStore.Web.ViewModels.Authors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BookStore.Data.Models;
+using BookStore.Services.Mapping;
+using BookStore.Web.ViewModels.Authors;
 
 namespace BookStore.Web.ViewModels.Books
 {
-    public class BookViewModel
+    public class BookViewModel : IMapFrom<Book>
     {
         public int Id { get; set; }
 
@@ -15,6 +12,6 @@ namespace BookStore.Web.ViewModels.Books
 
         public double Price { get; set; }
 
-        public AuthorViewModel[] Authors { get; set; } = null!; 
+        public virtual AuthorViewModel[] Authors { get; set; } = null!; 
     }
 }

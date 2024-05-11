@@ -23,6 +23,6 @@ namespace BookStore.Data.Models
 		[MaxLength(DescriptionMaxLength)]
 		public string Description { get; set; } = null!;
 
-		public ICollection<Book> Books { get; set; } = null!;
+		public  ICollection<Book> Books { get; set; } = null!;
 	}
 }

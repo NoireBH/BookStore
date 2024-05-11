@@ -48,9 +48,9 @@ namespace BookStore.Data.Models
         [ForeignKey(nameof(PublisherId))]
         public Publisher Publisher { get; set; } = null!;
 
-		public ICollection<Author> Authors { get; set; } = null!;
+		public  ICollection<Author> Authors { get; set; } = null!;
 
-		public ICollection<Genre> Genres { get; set; } = null!;
+		public  ICollection<Genre> Genres { get; set; } = null!;
 
 
 	}

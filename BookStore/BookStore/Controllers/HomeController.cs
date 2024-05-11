@@ -1,10 +1,12 @@
-﻿using BookStore.Web.ViewModels;
+﻿using BookStore.Web.Controllers;
+using BookStore.Web.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace BookStore.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
 	{
 		private readonly ILogger<HomeController> _logger;
 
@@ -13,12 +15,14 @@ namespace BookStore.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult Index()
+        [AllowAnonymous]
+        public IActionResult Index()
 		{
 			return View();
 		}
 
-		public IActionResult Privacy()
+        [AllowAnonymous]
+        public IActionResult Privacy()
 		{
 			return View();
 		}

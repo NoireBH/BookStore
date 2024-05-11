@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Data\BookStore.Data.csproj" />
+    <ProjectReference Include="..\BookStore.Services.Mapping\BookStore.Services.Mapping.csproj" />
+    <ProjectReference Include="..\BookStore.Web.ViewModels\BookStore.Web.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>

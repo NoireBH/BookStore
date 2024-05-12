@@ -25,7 +25,7 @@ namespace BookStore.Services.Data
             return books;
         }
 
-        public async Task<ICollection<HomeViewModel>> GetNewestBestsellersAndDiscountedBooks()
+        public async Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooks()
         {
             var newestBooks = await context.Books
                 .Take(3)

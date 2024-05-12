@@ -1,14 +1,39 @@
-﻿
+﻿@model HomeViewModel;
+
+
 @{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
 
-    <section class="home-new-books-container">
-        <h1>New <span>Books</span></h1>
+	<section class="home-new-books-container">
+		<h1>New <span>Books</span></h1>
+		<div class="container">
+			<div class="row">
+				@foreach (var book in Model.NewBooks)
+				{
+					<div>
+						<div>
+							<img src="@book.ImagePath" />
+						</div>
+						<div>@book.Title</div>
+						<div>
+							@if (book.Authors.Count > 1)
+							{
+								<p>@book.Authors.FirstOrDefault()!.Name...</p>
+							}
+							else
+							{
+								<p>@book.Authors.FirstOrDefault()!.Name</p>
+							}
+						</div>
+						<div>@book.Price</div>
+					</div>
+				}
+			</div>
+		</div>
 
-
-    </section>
+	</section>
 
 </div>

@@ -13,17 +13,21 @@ namespace BookStore.Controllers
 		private readonly ILogger<HomeController> _logger;
 		private readonly IBookService bookService;
 
-		public HomeController(ILogger<HomeController> logger, BookService bookService)
+		public HomeController(
+			ILogger<HomeController> logger, 
+			IBookService bookService)
 		{
 			_logger = logger;
 			this.bookService = bookService;
 		}
 
         [AllowAnonymous]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
 		{
+			var books = await bookService.GetNewestBestsellersAndDiscountedBooks();
 
-			return View();
+
+			return View(books);
 		}
 
         [AllowAnonymous]

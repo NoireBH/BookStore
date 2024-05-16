@@ -5,19 +5,19 @@
 	ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-
+<div class="text-center">	
 	<section class="home-new-books-container">
 		<h1 class="mb-5">New <span class="darkgreen-color-book">Books</span></h1>
 		<div class="container">
-			<div class="row">
+			<div class="slider">
 				@foreach (var book in Model.NewBooks)
 				{
 					<div class="col-4 index-book-container">
 						<div class="index-img-container">
 							<img class="img-responsive" src="@book.ImagePath" />
 						</div>
-						<div>@book.Title</div>
+						<div class="text-center">
+							<div>@book.Title</div>
 						<div>
 							@if (book.Authors.Count > 1)
 							{
@@ -29,6 +29,8 @@
 							}
 						</div>
 						<div class="darkgreen-color-book">@book.Price</div>
+						</div>
+						
 					</div>
 				}
 			</div>

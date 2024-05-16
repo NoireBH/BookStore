@@ -58,7 +58,15 @@ namespace BookStore.Data.Configurations
 
             publishers.Add(publisher);
 
-            return publishers.ToArray();
+			publisher = new Publisher()
+			{
+				Id = 6,
+				Name = "Bloomsbury"
+			};
+
+			publishers.Add(publisher);
+
+			return publishers.ToArray();
 
         }
     }

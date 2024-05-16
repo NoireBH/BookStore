@@ -69,13 +69,23 @@ namespace BookStore.Data.Configurations
             author = new Author()
             {
                 Id = 5,
-                Name = "Ernest Cline",
-                Description = "Ernest Christy Cline is an American science fiction novelist, slam poet, and screenwriter. He wrote the novels Ready Player One, Armada, and Ready Player Two and co-wrote the screenplay for the film adaptation of Ready Player One, directed by Steven Spielberg."
+                Name = "Ernest Cline",				
+				Description = "Ernest Christy Cline is an American science fiction novelist, slam poet, and screenwriter. He wrote the novels Ready Player One, Armada, and Ready Player Two and co-wrote the screenplay for the film adaptation of Ready Player One, directed by Steven Spielberg."
             };
 
             authors.Add(author);
 
-            return authors.ToArray();
+			author = new Author()
+			{
+				Id = 6,
+				Name = "JK Rowling",
+				ImagePath = "/images/authors/J.K.-Rowling-2021.jpg",
+				Description = "Ernest Christy Cline is an American science fiction novelist, slam poet, and screenwriter. He wrote the novels Ready Player One, Armada, and Ready Player Two and co-wrote the screenplay for the film adaptation of Ready Player One, directed by Steven Spielberg."
+			};
+
+			authors.Add(author);
+
+			return authors.ToArray();
         }
     }
 }

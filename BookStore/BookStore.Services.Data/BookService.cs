@@ -28,7 +28,8 @@ namespace BookStore.Services.Data
         public async Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooks()
         {
             var newestBooks = await context.Books
-                .Take(5)
+                .OrderByDescending(x=> x.Id)
+                .Take(9)
                 .To<BookViewModel>()
                 .ToArrayAsync();
 

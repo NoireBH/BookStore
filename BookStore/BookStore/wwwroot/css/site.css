@@ -22,6 +22,9 @@ body {
     font-weight: bolder;
 }
 
+.slider {
+
+}
 
 .index-img-container img {
     width: 320px;
@@ -50,8 +53,12 @@ body {
     height: 5.5rem;
 }
 
+.book-title {
+   font-weight:bolder;
+}
+
 .book-title:hover {
-    color: darkgreen;
+    color: darkgreen;   
 }
 
 .book-author-name:hover {

@@ -4,6 +4,7 @@ using BookStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240518160435_AddedRelationsToSeed")]
+    partial class AddedRelationsToSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -303,26 +305,6 @@ namespace BookStore.Data.Migrations
                         {
                             BooksId = 19,
                             GenresId = 8
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 15
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 16
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 7
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 5
                         });
                 });
 
@@ -842,11 +824,6 @@ namespace BookStore.Data.Migrations
                         {
                             Id = 14,
                             Name = "Manga"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Name = "Light-Novel"
                         },
                         new
                         {

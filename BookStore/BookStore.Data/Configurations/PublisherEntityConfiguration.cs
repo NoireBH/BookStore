@@ -66,6 +66,22 @@ namespace BookStore.Data.Configurations
 
 			publishers.Add(publisher);
 
+			publisher = new Publisher()
+			{
+				Id = 7,
+				Name = "George Allen & Unwin"
+			};
+
+			publishers.Add(publisher);
+
+			publisher = new Publisher()
+			{
+				Id = 8,
+				Name = "VIZ Media"
+			};
+
+			publishers.Add(publisher);
+
 			return publishers.ToArray();
 
         }

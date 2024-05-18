@@ -38,7 +38,7 @@ namespace BookStore.Data.Configurations
             {
                 Id = 2,
                 Name = "Andrzej Sapkowski",
-                ImagePath = "/images/authors/Andrzej_Sapkowski.png",
+                ImagePath = "/images/authors/Andrzej_Sapkowski.jpg",
                 Description = "Andrzej Sapkowski is a Polish fantasy writer, essayist, translator and a trained economist. He is best known for his six-volume series of books The Witcher, which revolves around the eponymous \"witcher,\" a monster-hunter, Geralt of Rivia."
             };
 
@@ -78,9 +78,49 @@ namespace BookStore.Data.Configurations
 			author = new Author()
 			{
 				Id = 6,
-				Name = "JK Rowling",
+				Name = "J.K Rowling",
 				ImagePath = "/images/authors/J.K.-Rowling-2021.jpg",
-				Description = "Ernest Christy Cline is an American science fiction novelist, slam poet, and screenwriter. He wrote the novels Ready Player One, Armada, and Ready Player Two and co-wrote the screenplay for the film adaptation of Ready Player One, directed by Steven Spielberg."
+				Description = "Joanne Rowling CH OBE FRSL, known by her pen name J. K. Rowling, is a British author and philanthropist. She wrote Harry Potter, a seven-volume fantasy series published from 1997 to 2007."
+			};
+
+			authors.Add(author);
+
+			author = new Author()
+			{
+				Id = 7,
+				Name = "J.R.R Tolkien",
+				ImagePath = "/images/authors/tolkien.jpg",
+				Description = "John Ronald Reuel Tolkien CBE FRSL was an English writer and philologist. He was the author of the high fantasy works The Hobbit and The Lord of the Rings. From 1925 to 1945, Tolkien was the Rawlinson and Bosworth Professor of Anglo-Saxon and a Fellow of Pembroke College, both at the University of Oxford."
+			};
+
+			authors.Add(author);
+
+			author = new Author()
+			{
+				Id = 8,
+				Name = "Tatsuki Fujimoto",
+				ImagePath = "/images/authors/Tatsuki Fujimoto.jpg",
+				Description = "Tatsuki Fujimoto is a Japanese manga artist, known for his works Fire Punch and Chainsaw Man."
+			};
+
+			authors.Add(author);
+
+			author = new Author()
+			{
+				Id = 9,
+				Name = "Sui Ishida",
+				ImagePath = "/images/authors/sui ishida.jpg",
+				Description = "Sui Ishida is a Japanese manga artist. He is popularly known for his dark fantasy manga series Tokyo Ghoul and Choujin X."
+			};
+
+			authors.Add(author);
+
+			author = new Author()
+			{
+				Id = 10,
+				Name = "Asato Asato",
+				ImagePath = "/images/authors/Asato_Asato.jpg",
+				Description = "Asato Asato is a female Japanese novelist. The pen name Asato Asato is a combination of her real name and eighty-eight. ."
 			};
 
 			authors.Add(author);

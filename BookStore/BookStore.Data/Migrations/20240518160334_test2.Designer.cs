@@ -4,6 +4,7 @@ using BookStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Data.Migrations
 {
     [DbContext(typeof(BookStoreDbContext))]
-    partial class BookStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240518160334_test2")]
+    partial class test2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -238,91 +240,6 @@ namespace BookStore.Data.Migrations
                         {
                             BooksId = 10,
                             GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 11,
-                            GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 12,
-                            GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 13,
-                            GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 14,
-                            GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 15,
-                            GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 16,
-                            GenresId = 6
-                        },
-                        new
-                        {
-                            BooksId = 17,
-                            GenresId = 14
-                        },
-                        new
-                        {
-                            BooksId = 17,
-                            GenresId = 16
-                        },
-                        new
-                        {
-                            BooksId = 18,
-                            GenresId = 14
-                        },
-                        new
-                        {
-                            BooksId = 18,
-                            GenresId = 5
-                        },
-                        new
-                        {
-                            BooksId = 19,
-                            GenresId = 14
-                        },
-                        new
-                        {
-                            BooksId = 19,
-                            GenresId = 16
-                        },
-                        new
-                        {
-                            BooksId = 19,
-                            GenresId = 8
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 15
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 16
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 7
-                        },
-                        new
-                        {
-                            BooksId = 20,
-                            GenresId = 5
                         });
                 });
 
@@ -842,11 +759,6 @@ namespace BookStore.Data.Migrations
                         {
                             Id = 14,
                             Name = "Manga"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Name = "Light-Novel"
                         },
                         new
                         {

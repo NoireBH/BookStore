@@ -24,7 +24,7 @@ namespace BookStore.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index()
 		{
-			var books = await bookService.GetNewestBestsellersAndDiscountedBooks();
+			var books = await bookService.GetNewestBestsellersAndDiscountedBooksAsync();
 
 
 			return View(books);

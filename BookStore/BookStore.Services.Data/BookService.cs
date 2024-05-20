@@ -16,7 +16,7 @@ namespace BookStore.Services.Data
             this.context = context;
         }
 
-        public async Task<ICollection<BookViewModel>> GetAllBooks()
+        public async Task<ICollection<BookViewModel>> GetAllBooksAsync()
         {
             var books = await context.Books
                 .To<BookViewModel>()
@@ -25,7 +25,12 @@ namespace BookStore.Services.Data
             return books;
         }
 
-        public async Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooks()
+		public Task<BookDetailsViewModel> GetBookDetailsByIdAsync(int id)
+		{
+			var book = context.Books.Where(b => b.Id == id).FirstOrDefault();
+		}
+
+		public async Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooksAsync()
         {
             var newestBooks = await context.Books
                 .OrderByDescending(x=> x.Id)
@@ -55,7 +60,7 @@ namespace BookStore.Services.Data
             return books;
         }
 
-        public async Task<ICollection<BookViewModel>> GetNewestBooks()
+        public async Task<ICollection<BookViewModel>> GetNewestBooksAsync()
         {
             var books = await context.Books
                 .Take(3)

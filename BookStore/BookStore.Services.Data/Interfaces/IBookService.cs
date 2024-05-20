@@ -5,10 +5,12 @@ namespace BookStore.Services.Data.Interfaces
 {
     public interface IBookService
     {
-        Task<ICollection<BookViewModel>> GetAllBooks();
+        Task<ICollection<BookViewModel>> GetAllBooksAsync();
 
-        Task<ICollection<BookViewModel>> GetNewestBooks();
+        Task<ICollection<BookViewModel>> GetNewestBooksAsync();
 
-        Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooks();
+        Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooksAsync();
+
+        Task<BookDetailsViewModel> GetBookDetailsByIdAsync(int id);
     }
 }

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using BookStore.Data.Models;
+using BookStore.Services.Mapping;
 using BookStore.Web.ViewModels.Authors;
-using BookStore.Web.ViewModels.Genre;
+using BookStore.Web.ViewModels.Genres;
 
 namespace BookStore.Web.ViewModels.Books
 {
-	public class BookDetailsViewModel
+	public class BookDetailsViewModel : IMapFrom<Book>, IHaveCustomMappings
 	{
 		public int Id { get; set; }
 
@@ -33,5 +29,12 @@ namespace BookStore.Web.ViewModels.Books
 		public ICollection<AuthorViewModel> Authors { get; set; } = null!;
 
 		public ICollection<GenreViewModel> Genres { get; set; } = null!;
+
+		public void CreateMappings(IProfileExpression configuration)
+		{
+			configuration.CreateMap<Book, BookDetailsViewModel>()
+			   .ForMember(bd => bd.PublisherName, cfg => cfg
+				   .MapFrom(b => b.Publisher.Name));
+		}
 	}
 }

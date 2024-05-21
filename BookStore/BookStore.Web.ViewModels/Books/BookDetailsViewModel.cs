@@ -8,7 +8,16 @@ namespace BookStore.Web.ViewModels.Books
 {
 	public class BookDetailsViewModel : IMapFrom<Book>, IHaveCustomMappings
 	{
-		public int Id { get; set; }
+        public BookDetailsViewModel()
+        {
+			Authors = new HashSet<AuthorViewModel>();
+			Genres = new HashSet<GenreViewModel>();
+			SameAuthorBooks = new HashSet<BookViewModel>();
+			SimularBooks = new HashSet<BookViewModel>();
+
+		}
+
+        public int Id { get; set; }
 
 		public string Title { get; set; } = null!;
 
@@ -29,6 +38,10 @@ namespace BookStore.Web.ViewModels.Books
 		public ICollection<AuthorViewModel> Authors { get; set; } = null!;
 
 		public ICollection<GenreViewModel> Genres { get; set; } = null!;
+
+		public ICollection<BookViewModel> SameAuthorBooks { get; set; } = null!;
+
+		public ICollection<BookViewModel> SimularBooks {  get; set; } = null!;
 
 		public void CreateMappings(IProfileExpression configuration)
 		{

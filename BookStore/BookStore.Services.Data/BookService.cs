@@ -16,7 +16,12 @@ namespace BookStore.Services.Data
             this.context = context;
         }
 
-        public async Task<ICollection<BookViewModel>> GetAllBooksAsync()
+		public Task<bool> ExistsById(int id)
+		{
+			return context.Books.AnyAsync(x => x.Id == id);
+		}
+
+		public async Task<ICollection<BookViewModel>> GetAllBooksAsync()
         {
             var books = await context.Books
                 .To<BookViewModel>()
@@ -25,9 +30,33 @@ namespace BookStore.Services.Data
             return books;
         }
 
-		public Task<BookDetailsViewModel> GetBookDetailsByIdAsync(int id)
-		{
-			var book = context.Books.Where(b => b.Id == id).FirstOrDefault();
+		public async Task<BookDetailsViewModel> GetBookDetailsByIdAsync(int id)
+		{           
+			var book = await context.Books
+                .Where(b => b.Id == id)
+                .To<BookDetailsViewModel>()
+                .FirstOrDefaultAsync();
+
+            var sameAuthorBooks = await context.Books
+                .Where(b => b.Authors
+                .Any(a => a.Id == id))
+				.OrderByDescending(x => x.Id)
+				.Take(9)
+				.To<BookDetailsViewModel>()
+                .ToArrayAsync();
+
+
+            var simularBooks = await context.Books
+				.Where(b => b.Genres
+				.Any(g => book!.Genres
+                    .Any(g2 => g2.Id == g.Id)))
+				.OrderByDescending(x => x.Id)
+				.Take(9)
+				.To<BookDetailsViewModel>()
+				.ToArrayAsync();
+
+
+			return book!;
 		}
 
 		public async Task<HomeViewModel> GetNewestBestsellersAndDiscountedBooksAsync()

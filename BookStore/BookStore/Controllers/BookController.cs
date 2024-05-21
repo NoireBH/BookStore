@@ -1,5 +1,6 @@
 ﻿using BookStore.Controllers;
 using BookStore.Services.Data.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Web.Controllers
@@ -19,11 +20,12 @@ namespace BookStore.Web.Controllers
 			return View();
 		}
 
-		public Task<IActionResult> Details(int id)
+		[AllowAnonymous]
+		public async Task<IActionResult> Details(int id)
 		{
-			var movie = bookService
+			var movie = await bookService.GetBookDetailsByIdAsync(id);
 
-			return View();
+			return View(movie);
 		}
 	}
 }

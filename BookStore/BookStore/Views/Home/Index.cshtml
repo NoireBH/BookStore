@@ -17,7 +17,11 @@
 							<img class="img-responsive" src="@book.ImagePath" />
 						</div>
 						<div class="text-center">
-							<div class="book-title">@book.Title</div>
+							<div>
+								<a class="book-title" asp-action="Details" asp-controller="Book" asp-route-id="@book.Id">
+									@book.Title
+								</a>							
+							</div>
 						<div>
 							@if (book.Authors.Count > 1)
 							{

@@ -3,6 +3,7 @@ using BookStore.Data.Models;
 using BookStore.Services.Mapping;
 using BookStore.Web.ViewModels.Authors;
 using BookStore.Web.ViewModels.Genres;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookStore.Web.ViewModels.Books
 {

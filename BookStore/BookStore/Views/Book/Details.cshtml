@@ -1,0 +1,96 @@
+﻿@model BookDetailsViewModel;
+
+<div class="book-details-img-container">
+	<img src="@Model.ImagePath" />
+</div>
+<div class="book-details-container">
+	<h1 class="book-title">@Model.Title</h1>
+	<div class="container">
+		<div class="row">
+			<p class="darkgreen-color-book">@Model.Price</p>
+			<div>
+				<span>
+					<button>-</button>
+				</span>
+				<input value="1" />
+				<span>
+					<button>+</button>
+				</span>
+			</div>
+			<button class="add-to-cart-btn">
+				BUY
+			</button>
+		</div>
+	</div>
+	<div class="product-details-nav">
+		<a>
+			DETAILS
+		</a>
+		<a>
+			DESCRIPTION
+		</a>
+		<a>
+			AUTHOR(S)
+		</a>
+	</div>	
+</div>
+<div class="same-author-books-container">
+	<h1 class="mb-5">Books by the same author</h1>
+	<div class="container">
+		<div class="slider">
+			@foreach (var book in Model.SameAuthorBooks)
+			{
+				<div class="index-book-container">
+					<div class="index-img-container">
+						<img class="img-responsive" src="@book.ImagePath" />
+					</div>
+					<div class="text-center">
+						<div class="book-title">@book.Title</div>
+						<div>
+							@if (book.Authors.Count > 1)
+							{
+								<p class="book-author-name">@(book.Authors.FirstOrDefault()!.Name)...</p>
+							}
+							else
+							{
+								<p class="book-author-name">@book.Authors.FirstOrDefault()!.Name</p>
+							}
+						</div>
+						<div class="darkgreen-color-book">@book.Price</div>
+					</div>
+
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<div class="same-author-books-container">
+	<h1 class="mb-5">Simular books based on genre</h1>
+	<div class="container">
+		<div class="slider">
+			@foreach (var book in Model.SameAuthorBooks)
+			{
+				<div class="index-book-container">
+					<div class="index-img-container">
+						<img class="img-responsive" src="@book.ImagePath" />
+					</div>
+					<div class="text-center">
+						<div class="book-title">@book.Title</div>
+						<div>
+							@if (book.Authors.Count > 1)
+							{
+								<p class="book-author-name">@(book.Authors.FirstOrDefault()!.Name)...</p>
+							}
+							else
+							{
+								<p class="book-author-name">@book.Authors.FirstOrDefault()!.Name</p>
+							}
+						</div>
+						<div class="darkgreen-color-book">@book.Price</div>
+					</div>
+
+				</div>
+			}
+		</div>
+	</div>
+</div>

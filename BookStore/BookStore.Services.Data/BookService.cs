@@ -37,9 +37,11 @@ namespace BookStore.Services.Data
 				.To<BookDetailsViewModel>()
 				.FirstOrDefaultAsync();
 
+			var authorIds = book!.Authors.Select(a => a.Id).ToList();
+			var genreIds = book.Genres.Select(g => g.Id).ToList();
+
 			var sameAuthorBooks = await context.Books
-				.Where(b => b.Authors
-				.Any(a => book!.Authors.Any(a2 => a2.Id == a.Id)))
+				.Where(b => b.Authors.Any(a => authorIds.Contains(a.Id)) && b.Id != id)
 				.OrderByDescending(x => x.Id)
 				.Take(9)
 				.To<BookViewModel>()
@@ -47,9 +49,7 @@ namespace BookStore.Services.Data
 
 
 			var simularBooks = await context.Books
-				.Where(b => b.Genres
-				.Any(g => book!.Genres
-					.Any(g2 => g2.Id == g.Id)))
+				.Where(b => b.Genres.Any(g => genreIds.Contains(g.Id)) && b.Id != id)
 				.OrderByDescending(x => x.Id)
 				.Take(9)
 				.To<BookViewModel>()

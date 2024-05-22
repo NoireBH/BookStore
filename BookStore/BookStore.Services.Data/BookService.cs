@@ -39,7 +39,7 @@ namespace BookStore.Services.Data
 
 			var sameAuthorBooks = await context.Books
 				.Where(b => b.Authors
-				.Any(a => a.Id == id))
+				.Any(a => book!.Authors.Any(a2 => a2.Id == a.Id)))
 				.OrderByDescending(x => x.Id)
 				.Take(9)
 				.To<BookViewModel>()

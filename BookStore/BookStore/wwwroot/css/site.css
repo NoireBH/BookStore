@@ -64,3 +64,9 @@ body {
 .book-author-name:hover {
     color: darkgreen;
 }
+
+.book-details-img-container img {
+    width: 320px;
+    height: 300px;
+    object-fit: scale-down;
+}

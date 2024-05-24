@@ -44,9 +44,15 @@ namespace BookStore.Web.Controllers
 				return StatusCode(500);
 			}
 
-
-
 			return View(movie);
+		}
+
+		[AllowAnonymous]
+		public async Task<IActionResult> Add(int id)
+		{
+
+
+			return View();
 		}
 	}
 }

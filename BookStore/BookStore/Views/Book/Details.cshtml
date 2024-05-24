@@ -1,40 +1,48 @@
 ﻿@model BookDetailsViewModel;
 
-<div class="book-details-img-container">
-	<img src="@Model.ImagePath" />
-</div>
-<div class="book-details-container">
-	<h1 class="book-title">@Model.Title</h1>
-	<div class="container">
-		<div class="row">
-			<p class="darkgreen-color-book">@Model.Price</p>
-			<div>
-				<span>
-					<button>-</button>
-				</span>
-				<input value="1" />
-				<span>
-					<button>+</button>
-				</span>
+<div class="container mb-5">
+	<div class="row">
+		<div class="col-3">
+			<img class="img-fluid" src="@Model.ImagePath" />
+		</div>
+		<div class="book-details-container col-9">
+			<h5 class="book-title">@Model.Title</h5>
+			<div class="container-fluid mb-2 p-0">
+				<div class="d-flex align-items-center">
+					<p class="darkgreen-color-book mb-0 me-4" style="font-size:24px">@(Model.Price)$</p>
+					<div class="d-flex">
+						<div class="d-flex me-2">
+							<span>
+								<button>-</button>
+							</span>
+							<input class="text-center" style="max-width:50px" value="1" />
+							<span>
+								<button>+</button>
+							</span>
+						</div>
+						<button class="add-to-cart-btn">
+							BUY
+						</button>
+					</div>
+					
+				</div>
 			</div>
-			<button class="add-to-cart-btn">
-				BUY
-			</button>
+			<div class="product-details-nav">
+				<a>
+					DETAILS
+				</a>
+				<a>
+					DESCRIPTION
+				</a>
+				<a>
+					AUTHOR(S)
+				</a>
+			</div>
 		</div>
 	</div>
-	<div class="product-details-nav">
-		<a>
-			DETAILS
-		</a>
-		<a>
-			DESCRIPTION
-		</a>
-		<a>
-			AUTHOR(S)
-		</a>
-	</div>	
 </div>
-<div class="same-author-books-container">
+
+<div class="same-author-books-container text-center">
 	<h1 class="mb-5">Books by the same author</h1>
 	<div class="container">
 		<div class="slider">
@@ -64,7 +72,7 @@
 		</div>
 	</div>
 </div>
-<div class="same-author-books-container">
+<div class="simular-books-container text-center">
 	<h1 class="mb-5">Simular books based on genre</h1>
 	<div class="container">
 		<div class="slider">

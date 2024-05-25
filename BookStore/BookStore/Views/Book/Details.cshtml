@@ -6,18 +6,18 @@
 			<img class="img-fluid" src="@Model.ImagePath" />
 		</div>
 		<div class="book-details-container col-9">
-			<h5 class="book-title">@Model.Title</h5>
-			<div class="container-fluid mb-2 p-0">
+			<h5 class="book-title mb-3">@Model.Title</h5>
+			<div class="container-fluid mb-4 p-0">
 				<div class="d-flex align-items-center">
 					<p class="darkgreen-color-book mb-0 me-4" style="font-size:24px">@(Model.Price)$</p>
 					<div class="d-flex">
-						<div class="d-flex me-2">
+						<div class="d-flex me-2 book-quantity-btn-container">
 							<span>
-								<button>-</button>
+								<button class="minus-btn">-</button>
 							</span>
-							<input class="text-center" style="max-width:50px" value="1" />
+							<input class="text-center" value="100" />
 							<span>
-								<button>+</button>
+								<button class="plus-btn">+</button>
 							</span>
 						</div>
 						<button class="add-to-cart-btn">
@@ -27,7 +27,7 @@
 					
 				</div>
 			</div>
-			<div class="product-details-nav">
+			<div class="product-details-nav d-flex gap-4 fw-bolder">
 				<a>
 					DETAILS
 				</a>
@@ -73,7 +73,7 @@
 	</div>
 </div>
 <div class="simular-books-container text-center">
-	<h1 class="mb-5">Simular books based on genre</h1>
+	<h1 class="mb-5">Simular books</h1>
 	<div class="container">
 		<div class="slider">
 			@foreach (var book in Model.SimularBooks)

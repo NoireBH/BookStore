@@ -70,3 +70,50 @@ body {
     height: 300px;
     object-fit: scale-down;
 }
+
+.book-quantity-btn-container {
+    max-width:200px;
+}
+
+.book-quantity-btn-container span > button {
+    border: 1px solid #004812;
+    color: darkgreen;
+    padding: 6px 10px;
+    font-weight: bolder;
+    background-color: transparent;
+    border-radius: 8px 8px 0px 0px;
+}
+
+    .book-quantity-btn-container span button:hover, .add-to-cart-btn:hover {
+        color: white !important;
+        background-color: darkgreen !important;
+        transition: 0.5s;
+    }
+
+    .book-quantity-btn-container span button:nth-child(1) {
+        color: darkgreen;
+        background-color: transparent;
+        border-radius: 8px 0px 0px 8px;
+    }
+
+    .book-quantity-btn-container span:nth-child(3) button {
+        color: darkgreen;
+        background-color: transparent;
+        border-radius: 0px 8px 8px 0px;
+    }
+
+
+.book-quantity-btn-container input {
+    border: 1px solid darkgreen;
+    padding: 4px 4px;
+    overflow: visible;
+    max-width:50px;
+}
+
+.add-to-cart-btn {
+    background-color: transparent;
+    padding: 5px 32px 5px 32px;
+    color: darkgreen;
+    font-weight: bolder;
+    border: 1px solid darkgreen;
+}

@@ -65,7 +65,7 @@ body {
     color: darkgreen;
 }
 
-.book-details-img-container img {
+.book-details-img-container img, .book-details-author-img-container img {
     width: 320px;
     height: 300px;
     object-fit: scale-down;

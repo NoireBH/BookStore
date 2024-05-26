@@ -27,8 +27,9 @@
 					
 				</div>
 			</div>
-			<div class="product-details-nav d-flex gap-4 fw-bolder">
-				<a>
+			<div class="book-details-container">
+				<div class="book-details-nav d-flex gap-4 fw-bolder mb-3">
+					<a>
 					DETAILS
 				</a>
 				<a>
@@ -37,6 +38,14 @@
 				<a>
 					AUTHOR(S)
 				</a>
+				</div>
+				<div class="book-details">
+					<p>Pages: @Model.PageCount</p>
+					<p>Year Released: @Model.YearOfRelease</p>
+					<p class="d-flex">Genres: @string.Join(", ", Model.Genres.Select(g => g.Name))</p>
+					<p class="d-flex">Author(s): @string.Join(", ", Model.Authors.Select(a => a.Name))</p>
+					<p class="d-flex">Publisher: @Model.PublisherName</p>
+				</div>
 			</div>
 		</div>
 	</div>

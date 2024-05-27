@@ -13,11 +13,11 @@
 					<div class="d-flex">
 						<div class="d-flex me-2 book-quantity-btn-container">
 							<span>
-								<button class="minus-btn">-</button>
+								<button id="minus-btn">-</button>
 							</span>
-							<input class="text-center" value="100" />
+							<input class="text-center" id="book-amount" value="1" readonly />
 							<span>
-								<button class="plus-btn">+</button>
+								<button id="plus-btn">+</button>
 							</span>
 						</div>
 						<button class="add-to-cart-btn">
@@ -53,7 +53,7 @@
 
 					@foreach (var author in Model.Authors)
 					{
-						<div>
+						<div class="text-center">
 							<div class="book-details-author-img-container">
 								<img src="@author.ImagePath" />
 							</div>
@@ -130,3 +130,8 @@
 		</div>
 	</div>
 </div>
+
+@section Scripts{
+	<script>decreaseAmount()</script>
+	<script>increaseAmount()</script>
+}

@@ -29,15 +29,15 @@
 			</div>
 			<div class="book-details-container">
 				<div class="book-details-nav d-flex gap-4 fw-bolder mb-3">
-					<a>
+					<button class="btn text-decoration-none">
 						DETAILS
-					</a>
-					<a>
+					</button>
+					<button class="btn text-decoration-none">
 						DESCRIPTION
-					</a>
-					<a>
+					</button>
+					<button class="btn text-decoration-none">
 						AUTHOR(S)
-					</a>
+					</button>
 				</div>
 				<div class="book-details">
 					<p>Pages: @Model.PageCount</p>
@@ -46,10 +46,10 @@
 					<p class="d-flex">Author(s): @string.Join(", ", Model.Authors.Select(a => a.Name))</p>
 					<p class="d-flex">Publisher: @Model.PublisherName</p>
 				</div>
-				<div class="book-details-description">
+				<div class="book-details-description d-none">
 					<p>@Model.Description</p>
 				</div>
-				<div class="book-details-authors d-flex flex-wrap">
+				<div class="book-details-authors d-flex flex-wrap d-none">
 
 					@foreach (var author in Model.Authors)
 					{

@@ -17,7 +17,33 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+		<nav class="navbar navbar-default navbar-main-white navbar-pad-top navbar-first">
+			<div class="container padding-right-15">
+				<div class="navbar-header nav-brand">
+					<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+						<img src="~/images/—Pngtree—black ink quill feather pen_5976448.png" style="height: 150px" />
+					</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right navbar-mob-item-left nav-menu">
+					<li>
+						<partial name="_LoginPartial" />
+					</li>
+				</ul>
+				<form action="" class="navbar-form navbar-left navbar-main-search navbar-main-search-category nav-search" role="search" onsubmit="if (!window.__cfRLUnblockHandlers) return false; return prepareSearch()">
+					<div class="form-group">
+						<input type="text" name="q" id="s_input_1" class="form-control" placeholder="Заглавие, автор, издател" aria-label="search" value="" autocomplete="off">
+						<input type="submit" class="submit-search-btn" onclick="if (!window.__cfRLUnblockHandlers) return false; return check_search_q('s_input_1');" value="" aria-labelledby="search" aria-hidden="true">
+						<div id="suggestions" style=""></div>
+					</div>
+
+				</form>
+			</div>
+		</nav>
+
+
+
+		@* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
 			<div class="container-fluid">
 				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
 					<img src="~/images/—Pngtree—black ink quill feather pen_5976448.png" style="height: 150px" />
@@ -53,7 +79,7 @@
 				</div>
 
 			</div>
-		</nav>
+		</nav> *@
 	</header>
 	<div class="container">
 		<main role="main" class="pb-3">

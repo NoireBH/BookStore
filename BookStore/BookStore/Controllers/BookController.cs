@@ -50,8 +50,6 @@ namespace BookStore.Web.Controllers
 		[AllowAnonymous]
 		public async Task<IActionResult> Add(int id)
 		{
-
-
 			return View();
 		}
 	}
